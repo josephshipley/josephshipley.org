@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #f8f8f8;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #ff6600;
+        }
+        section {
+            display: none; /* hide all sections by default */
+            padding: 20px;
+        }
+        section.active {
+            display: block; /* show only the active section */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About Me</a>
+        <a onclick="showSection('works')">Works</a>
+        <a onclick="showSection('blog')">Blog</a>
+        <a onclick="showSection('travel')">Travel Blog</a>
+        <a onclick="showSection('contact')">Contact Me!</a>
+        <a onclick="showSection('media')">Physical Media</a>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" class="active">
+        <h1>Welcome to My Page</h1>
+        <p>Howdy, Welcome Aboard To My Website, My Name Is Joseph Shipley, and 
+        I Am An Aspiring Animator, Screenwriter, And Computer Scientist. I'm From The Hottest 
+        And Most Devastating State To Live In (Florida). I Also Do Music And It's Fun Producing 
+        Music From Time To Time. Oh, And Have A Look Around! Not A WHOLE Lot At The Minute, But I 
+        Plan To Update This So Much. Enjoy.</p>
+        <p>- Joseph Shipley :)</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello, My Name Is Joseph Shipley, as i said before on the home section
+i am an aspiring animator, screenwriter, and computer scientist, i love stuff like
+physical media and etc, im a nerd too so if you see 80s electronics posted on my blog
+i collect those, im 21 years old and im looking for a life purpose, (did not mean to sound dark
+and gloomy there), but i also do music production and its fun and keeps me distracted, oh and 
+did i mention i collect alot of physical media?, but thats it from me for now, just a dude trying to 
+have fun, as i said, i plan on working on this website alot, so stay tuned, oh and another thing i would
+do is produce music and screenwrite for other companies, but honestly who knows what life has in store 
+for me, but yeah enjoy the website, ALOT more in store soon.</p>
+    </section>
+
+    <section id="works">
+        <h2>Works</h2>
+        <p>My Works I Have Done Will Go Here!</p>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>My Thoughts And Photos will go here</p>
+    </section>
+
+    <section id="travel">
+        <h2>Travel Blog</h2>
+        <p>Just in case i travel pictures will go here</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me!</h2>
+        <p>i would honestly love if letters were sent, i love the 80s livestyle
+        even though i am born in 2004, i love sending letters more than digital email
+        but if you do email, my email for contact is dvdcatcher4@gmail.com, if i dont
+        reply in two days or so, my bad sometimes i dont really reply but i try too!</p>
+    </section>
+
+    <section id="media">
+        <h2>Physical Media</h2>
+        <p>Showing off my collection of VHS, CDs, 8-tracks, and more!</p>
+    </section>
+
+    <script>
+        function showSection(id) {
+            // hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            // show selected section
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
